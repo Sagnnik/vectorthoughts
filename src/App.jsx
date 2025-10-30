@@ -12,7 +12,7 @@ import LatestBlogCard from './components/LatestBlogCard';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/vectorthoughts">
       <Routes>
         <Route path="/" element={<PublicBlogPage />} />
         <Route path="/about" element={<About />} />
@@ -21,6 +21,7 @@ function App() {
         <Route path="/request-admin" element={<RequestAdmin />} />
         <Route path="/admin/publish/:postId" element={<AdminRoute><PublishHtml /></AdminRoute>}/>
         <Route path="/admin" element={<AdminRoute><AdminBlogPage /></AdminRoute>}/>
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );
