@@ -1,0 +1,39 @@
+name: Deploy react on gh-pages
+
+on:
+    workflow_dispatch:
+    push:
+        branches:
+            - main
+
+jobs:
+    build-deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Branch
+              uses: actions/checkout@v3
+            
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                node-version: 20
+
+            - name: Install Dependencies
+              run: npm install
+
+            # - name: Create .env file
+            #   run: |
+            #     echo "VITE_CLERK_PUBLISHABLE_KEY=${{ secrets.VITE_CLERK_PUBLISHABLE_KEY }}" >> .env
+            #     echo "VITE_ADMIN_CLERK_ID=${{ secrets.VITE_ADMIN_CLERK_ID }}" >> .env
+            #     echo "VITE_FASTAPI_BASE_URL=${{ secrets.VITE_FASTAPI_BASE_URL }}" >> .env
+
+
+            - name: Build
+              run: npm run build
+
+            - name: Deploy to pages
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                publish_dir: dist

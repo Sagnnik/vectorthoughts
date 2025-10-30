@@ -1,0 +1,46 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@clerk/clerk-react": "^5.53.1",
+    "@tailwindcss/vite": "^4.1.14",
+    "@tanstack/react-query": "^5.90.5",
+    "@tanstack/react-query-devtools": "^5.90.2",
+    "@wiris/mathtype-froala3": "^7.31.0",
+    "clsx": "^2.1.1",
+    "dotenv": "^17.2.3",
+    "font-awesome": "^4.7.0",
+    "froala-editor": "^4.6.2",
+    "ldrs": "^1.1.7",
+    "lucide-react": "^0.545.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-froala-wysiwyg": "^4.6.2",
+    "react-hook-form": "^7.65.0",
+    "react-intersection-observer": "^9.16.0",
+    "react-router-dom": "^7.9.4",
+    "tailwindcss": "^4.1.14"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@tanstack/eslint-plugin-query": "^5.91.2",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "gh-pages": "^6.3.0",
+    "globals": "^16.4.0",
+    "vite": "^7.1.7"
+  }
+}
