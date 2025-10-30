@@ -2,7 +2,7 @@ import { useState } from 'react'
 import PublishHtml from './editor/PublishHtml';
 import AdminBlogPage from './pages/AdminBlogPage';
 import PostPreview from './pages/PostPreview';
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import {BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 import About from "./pages/About";
 import Tags from "./pages/Tags";
 import RequestAdmin from './pages/RequestAdmin';
