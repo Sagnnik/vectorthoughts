@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query'
 import { Hourglass } from "ldrs/react";
 import 'ldrs/react/Hourglass.css'
 
-const BASE = import.meta.env.VITE_FASTAPI_BASE_URL || "http://localhost:8000";
+const BASE = import.meta.env.VITE_FASTAPI_BASE_URL;
 
 export default function PostPreview() {
 

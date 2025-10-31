@@ -12,7 +12,7 @@ import "froala-editor/js/plugins/code_view.min.js";
 import "./froala-dark-overrides.css";
 
 export default function SimpleEditor({ html, setHtml, postId }) {
-
+  const BASE = import.meta.env.VITE_FASTAPI_BASE_URL
   useEffect(() => {
     if (typeof window === "undefined" || !window.FroalaEditor) return;
 
@@ -124,7 +124,7 @@ export default function SimpleEditor({ html, setHtml, postId }) {
       placeholderText: "Start writing your blog post ... ",
       charCounterCount: true,
 
-      imageUploadURL: `http://localhost:8000/api/assets/froala-image/${postId}`,
+      imageUploadURL: `${BASE}/api/assets/froala-image/${postId}`,
       imageUploadMethod: "POST",
 
       events: {
