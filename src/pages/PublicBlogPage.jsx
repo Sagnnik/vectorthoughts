@@ -13,7 +13,7 @@ import 'ldrs/react/Pulsar.css'
 import { useInView } from 'react-intersection-observer'
 
 
-const BACKEND_BASE_URL = import.meta.env.FASTAPI_BASE_URL || 'http://localhost:8000';
+const BACKEND_BASE_URL = import.meta.env.VITE_FASTAPI_BASE_URL || 'http://localhost:8000';
 
 export default function PublicBlogPage() {
   const navigate = useNavigate();
